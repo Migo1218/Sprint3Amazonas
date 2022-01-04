@@ -12,6 +12,7 @@ import { useDispatch } from 'react-redux'
 import PrivateRoute from './PrivateRoute'
 import {  useNavigate } from "react-router-dom";
 import PublicRoute from './PublicRoute'
+import { Location } from '../components/Location'
 
 
 const AppRouter = () => {
@@ -33,6 +34,7 @@ const AppRouter = () => {
                 <Route exact path="/"  element={<Frontal/>}/>                
                 <Route exact path="/superior"  element={<Superior/>}/>
                 <Route exact path="/trasero"  element={<Trasero/>}/>
+                <Route exact path="/location"  element={<Location/>}/>
                 <Route exact path="/login"  element={(
                     <PublicRoute>
                         <Login />

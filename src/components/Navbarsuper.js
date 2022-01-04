@@ -24,11 +24,15 @@ import { signOut } from "@firebase/auth";
 import { logout } from "../actions/loginAction";
 
 const Navbarsuper = () => {
+
+
+  
   
   const redirectLogin = useNavigate();
   const redirectHome = useNavigate();
   
   const redirectCarrito = useNavigate()
+  const redirectLocation = useNavigate()
   const dispatch = useDispatch()
   const isLoggedIn = useSelector((state) => state.login.isLoggedIn);
   const userName = useSelector((state) => state.login.name);
@@ -46,7 +50,7 @@ const Navbarsuper = () => {
       </div>
 
       <Eligetudireccion>
-        <Colorp> Elige tu dirección</Colorp>
+        <Colorp onClick={() => redirectLocation('/location')}> Activa tu ubicación</Colorp>
       </Eligetudireccion>
 
       <Divbuscar>
